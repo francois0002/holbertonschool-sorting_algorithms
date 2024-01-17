@@ -73,7 +73,7 @@ void quicksort(int *array, int start, int end, size_t size)
 */
 void quick_sort(int *array, size_t size)
 {
-	/* Only sort if array is not NULL and size is greater than 1 */
-	if (array && size > 1)
+	/* Only sort if array is not NULL and size is greater than 2 */
+	if (array && size > 2)
 		quicksort(array, 0, size - 1, size);
 }
