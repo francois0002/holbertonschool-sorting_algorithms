@@ -60,8 +60,10 @@ void quicksort(int *array, int start, int end, size_t size)
 		pivot = lomuto(array, start, end, size);
 
 		/* Recursively sort elements before and after pivot */
-		quicksort(array, start, pivot - 1, size);
-		quicksort(array, pivot + 1, end, size);
+		if (pivot > start)
+			quicksort(array, start, pivot - 1, size);
+		if (pivot < end)
+			quicksort(array, pivot + 1, end, size);
 	}
 }
 
